@@ -5,6 +5,6 @@
         IncludeStartAndEnd,
         IncludeStartOnly,
         IncludeEndOnly,
-        ExecludeStartEnd
+        ExecludeStartAndEnd
     }
 }

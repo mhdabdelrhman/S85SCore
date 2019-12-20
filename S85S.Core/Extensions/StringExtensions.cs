@@ -2,6 +2,7 @@
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace S85S.Core.Extensions
@@ -81,7 +82,11 @@ namespace S85S.Core.Extensions
 
         public static bool IsEmail(this string s)
         {
-            return s == null || string.IsNullOrEmpty(s) || string.IsNullOrWhiteSpace(s);
+            if (s.IsEmpty())
+                return false;
+            var regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            var match = regex.Match(s);
+            return match.Success;
         }
     }
 }

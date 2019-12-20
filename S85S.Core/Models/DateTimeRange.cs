@@ -88,7 +88,7 @@ namespace S85S.Core.Models
                     return dateTime >= o.Start && dateTime < o.End;
                 case RangeCompare.IncludeEndOnly:
                     return dateTime > o.Start && dateTime <= o.End;
-                case RangeCompare.ExecludeStartEnd:
+                case RangeCompare.ExecludeStartAndEnd:
                     return dateTime > o.Start && dateTime < o.End;
             }
 
