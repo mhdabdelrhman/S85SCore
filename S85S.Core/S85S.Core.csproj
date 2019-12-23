@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Mohammed ABD ALRHMAN</Authors>
+    <Company>MHD ABD ALRHMAN</Company>
+    <Description>.Net Standard - Primitive Types Extensions. S85S.Core is a standard .net library contains a useful collection of extensions for primitive types.</Description>
   </PropertyGroup>
 
   <ItemGroup>

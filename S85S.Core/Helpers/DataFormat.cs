@@ -5,7 +5,7 @@ namespace S85S.Core.Helpers
     internal static class DataFormat
     {
         #region Core Formatting Metods
-        public static bool IsValidDate(string date)
+        public static bool IsValidDateTime(string date)
         {
             bool retValue = false;
             DateTime result = new DateTime();
@@ -17,7 +17,7 @@ namespace S85S.Core.Helpers
             return retValue;
         }
 
-        public static bool IsValidDate(object date)
+        public static bool IsValidDateTime(object date)
         {
             bool retValue = false;
             DateTime result = new DateTime();
@@ -36,7 +36,7 @@ namespace S85S.Core.Helpers
         public static DateTime GetDateTime(string date)
         {
             DateTime retValue = new DateTime();
-            if (IsValidDate(date))
+            if (IsValidDateTime(date))
             {
                 retValue = Convert.ToDateTime(date);
             }
@@ -47,7 +47,7 @@ namespace S85S.Core.Helpers
         public static DateTime GetDateTime(object date)
         {
             DateTime retValue = new DateTime();
-            if (IsValidDate(date))
+            if (IsValidDateTime(date))
             {
                 retValue = Convert.ToDateTime(date);
             }
@@ -58,7 +58,7 @@ namespace S85S.Core.Helpers
         public static DateTime? GetNullAbleDateTime(object date)
         {
             DateTime? retValue = null;
-            if (IsValidDate(date))
+            if (IsValidDateTime(date))
             {
                 retValue = Convert.ToDateTime(date);
             }
@@ -66,19 +66,19 @@ namespace S85S.Core.Helpers
             return retValue;
         }
 
-        public static bool IsNumeric(object value)
+        public static bool IsDouble(object value)
         {
             bool retValue = false;
 
             if (value != null)
             {
-                retValue = IsNumeric(value.ToString());
+                retValue = IsDouble(value.ToString());
             }
 
             return retValue;
         }
 
-        public static bool IsNumeric(string value)
+        public static bool IsDouble(string value)
         {
             bool retValue = false;
             double result = 0;
@@ -255,7 +255,7 @@ namespace S85S.Core.Helpers
         {
             double retValue = 0;
 
-            if (IsNumeric(value))
+            if (IsDouble(value))
             {
                 retValue = Convert.ToDouble(value);
             }
@@ -268,7 +268,7 @@ namespace S85S.Core.Helpers
         {
             double retValue = 0;
 
-            if (IsNumeric(value))
+            if (IsDouble(value))
             {
                 retValue = Convert.ToDouble(value);
             }
