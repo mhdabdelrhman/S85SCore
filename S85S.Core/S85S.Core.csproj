@@ -5,6 +5,10 @@
     <Authors>Mohammed ABD ALRHMAN</Authors>
     <Company>MHD ABD ALRHMAN</Company>
     <Description>.Net Standard - Primitive Types Extensions. S85S.Core is a standard .net library contains a useful collection of extensions for primitive types.</Description>
+    <RepositoryUrl>https://github.com/mhdabdelrhman/S85SCore</RepositoryUrl>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.1</AssemblyVersion>
+    <FileVersion>1.0.1.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
